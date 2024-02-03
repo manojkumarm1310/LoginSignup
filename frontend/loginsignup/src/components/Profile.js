@@ -26,7 +26,7 @@ function Profile()
         setErrorValidation(ProfileValidationCheck);
         if(ProfileValidationCheck.age==="" && ProfileValidationCheck.gender==="" && ProfileValidationCheck.MobileNumber==="")
         {   
-            axios.post("https://loginsignup-backend-production.up.railway.app/profile", profileData).then((res)=>
+            axios.post("https://loginsignup-production.up.railway.app/profile", profileData).then((res)=>
             {
                 setUpdateState("Updated");
             }).catch((err)=>

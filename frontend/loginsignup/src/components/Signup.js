@@ -13,7 +13,7 @@ function Signup()
     {
        if(bool)
        {
-        axios.get("https://loginsignup-backend-production.up.railway.app/signup").then((response)=>
+        axios.get("https://loginsignup-production.up.railway.app/signup").then((response)=>
         {  
          for(let i=0;i<response.data.length;i++)
          {
@@ -67,7 +67,7 @@ function Signup()
         }
         if(SignupValidationCheck.email==="" && SignupValidationCheck.password==="" && SignupValidationCheck.confirmpassword==="" && SignupValidationCheck.name==="" && check)
         {   
-            axios.post("https://loginsignup-backend-production.up.railway.app/signup", signupData).then(res=>
+            axios.post("https://loginsignup-production.up.railway.app/signup", signupData).then(res=>
             {
                     navigate("/");
             }).catch((err)=>

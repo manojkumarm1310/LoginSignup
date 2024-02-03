@@ -11,7 +11,7 @@ function Login()
     {
        if(bool)
        {
-        axios.get("https://loginsignup-backend-production.up.railway.app/login").then((response)=>
+        axios.get("https://loginsignup-production.up.railway.app/login").then((response)=>
         {  
          for(let i=0;i<response.data.length;i++)
          {
@@ -47,7 +47,7 @@ function Login()
         setValidationError(LoginValidationCheck);
         if(LoginValidationCheck.email==="" && LoginValidationCheck.password==="")
         {
-            axios.post("https://loginsignup-backend-production.up.railway.app/login",loginData).then(res=>{
+            axios.post("https://loginsignup-production.up.railway.app/login",loginData).then(res=>{
                 if(res.data.status==="Success")
                 {
                     setErrorNotify(true);

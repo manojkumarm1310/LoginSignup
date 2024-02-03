@@ -11,7 +11,7 @@ export default function Changepassword()
     {
        if(bool)
        {
-        axios.get("https://loginsignup-backend-production.up.railway.app/changepassword").then((response)=>
+        axios.get("https://loginsignup-production.up.railway.app/changepassword").then((response)=>
         {  
          for(let i=0;i<response.data.length;i++)
          {
@@ -55,7 +55,7 @@ export default function Changepassword()
             {
                 if(SignupValidationCheck.email==="" && SignupValidationCheck.password==="" && SignupValidationCheck.confirmpassword==="" )
                 {   
-                    axios.post("https://loginsignup-backend-production.up.railway.app/changepassword", changepassworddata).then(res=>
+                    axios.post("https://loginsignup-production.up.railway.app/changepassword", changepassworddata).then(res=>
                     {
                         setupdateStates("Password updated");
                     }).catch((err)=>
